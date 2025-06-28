@@ -1,0 +1,3 @@
+# loại trừ thư mục IDE/editor
+.vscode/
+# có thể thêm node_modules/, .DS_Store,… nếu cần

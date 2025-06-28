@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - VLU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-center">
+                <ul class="nav-menu nav-menu-top">
+                    <li class="active"><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sinh viên</a></li>
+                    <li><a href="#">Cựu sinh viên</a></li>
+                </ul>
+                <div class="nav-bottom-row">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094669/Layer_1_xtetxw.png" alt="Van Lang University Logo" class="logo-img">
+                    <ul class="nav-menu nav-menu-bottom">
+                        <li><a href="#">Về Văn Lang</a></li>
+                        <li><a href="#">Đào Tạo</a></li>
+                        <li><a href="#">Tuyển Sinh</a></li>
+                        <li><a href="#">Nghiên cứu khoa học</a></li>
+                        <li><a href="#">Đời sống Văn Lang</a></li>
+                        <li><a href="#">Tin tức sự kiện</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095320/search-sm_gnpxhd.png" alt="Search" class="nav-search-img">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095410/calendar_i6kph6.png" alt="Calendar" class="nav-calendar-img">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094984/Frame_1_gpkmvb.png" alt="Vietnam Flag" class="nav-flag-img">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095667/chevron-right_hb5dln.png" alt="Chevron Down" class="nav-chevron-img">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Chào mừng đến với VLU</h1>
+            <p>Khám phá những điều tuyệt vời và trải nghiệm dịch vụ chất lượng cao của chúng tôi</p>
+            <a href="#services" class="cta-button">Khám Phá Ngay</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="features">
+        <div class="container">
+            <h2 class="section-title">Dịch Vụ Của Chúng Tôi</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Phát Triển Nhanh</h3>
+                    <p>Chúng tôi cung cấp giải pháp phát triển nhanh chóng và hiệu quả cho doanh nghiệp của bạn.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Giải Pháp Sáng Tạo</h3>
+                    <p>Đội ngũ chuyên gia giàu kinh nghiệm sẽ mang đến những giải pháp sáng tạo và độc đáo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Bảo Mật Tuyệt Đối</h3>
+                    <p>Đảm bảo an toàn và bảo mật thông tin của bạn với các tiêu chuẩn bảo mật cao nhất.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Về Chúng Tôi</h2>
+                    <p>VLU là một công ty tiên phong trong lĩnh vực công nghệ, chuyên cung cấp các giải pháp số hóa hiện đại cho doanh nghiệp.</p>
+                    <p>Với đội ngũ chuyên gia giàu kinh nghiệm và công nghệ tiên tiến, chúng tôi cam kết mang đến những sản phẩm và dịch vụ chất lượng cao nhất.</p>
+                    <p>Mục tiêu của chúng tôi là giúp doanh nghiệp phát triển bền vững trong kỷ nguyên số.</p>
+                </div>
+                <div class="about-image">
+                    <span>VLU</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#">📧</a>
+                <a href="#">📱</a>
+                <a href="#">💬</a>
+                <a href="#">🌐</a>
+            </div>
+            <p>&copy; 2024 VLU. Tất cả quyền được bảo lưu.</p>
+            <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP.HCM</p>
+            <p>Điện thoại: (84) 123-456-789 | Email: info@vlu.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(102, 126, 234, 0.95)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        });
+    </script>
+</body>
+</html> 
