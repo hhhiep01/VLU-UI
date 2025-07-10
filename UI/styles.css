@@ -1233,9 +1233,22 @@ body {
   border-top-right-radius: 240px;
   border-bottom-right-radius: 240px;
 }
-.ranking-image-bottom {
-  margin-top: 80px;
+@media (max-width: 900px) {
+  .ranking-image {
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .arrow-ranking-left,
+  .arrow-ranking-right {
+    display: none;
+  }
+  .ranking-image img {
+    width: 160px;
+    margin: 0 0 8px 0;
+  }
 }
+
 .full-width-img {
   width: 100vw;
   height: auto;
