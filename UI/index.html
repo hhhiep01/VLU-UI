@@ -24,7 +24,7 @@
                         alt="Van Lang University Logo" class="logo-img">
                     <ul class="nav-menu nav-menu-bottom">
                         <li><a href="#">Về Văn Lang</a></li>
-                        <li><a href="#">Đào Tạo</a></li>
+                        <li><a href="dao-tao.html">Đào Tạo</a></li>
                         <li><a href="#">Tuyển Sinh</a></li>
                         <li><a href="#">Nghiên cứu khoa học</a></li>
                         <li><a href="#">Đời sống Văn Lang</a></li>
@@ -46,10 +46,75 @@
             </div>
         </div>
     </nav>
-    <div class="news-banner">
+    <div class="news-banner" style="position:relative;overflow:hidden;">
         <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751891471/ChatGPT_Image_20_59_33_22_thg_6_2025_2_copy_2_iraair.webp"
-            alt="Banner Tin tức & Sự kiện" style="width:100%;max-width:100%;display:block;margin:0 auto;"
-            loading="lazy">
+            alt="Banner Tin tức & Sự kiện"
+            style="width:100%;max-width:100%;display:block;margin:0 auto;filter:brightness(0.55);">
+        <div class="banner-overlay-text"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:60px;padding-top:60px;z-index:2;">
+            <h1 style="font-size:3.2rem;font-weight:800;line-height:1.1;margin-bottom:32px;color:#fff;">
+                <span style="display:block;margin-bottom:4px;">Chào mừng</span>
+                <span style="display:block;margin-bottom:4px;">Đến với Giao diện Xanh</span>
+                <span style="display:block;margin-bottom:4px;">của Trường Đại học Văn Lang</span>
+            </h1>
+            <div
+                style="font-size:1.1rem;font-weight:400;margin-top:24px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.3);max-width:600px;">
+                Lựa chọn truy cập phiên bản này là bạn đang chung tay cùng chúng tôi giảm thiểu phát thải khí CO2. Mỗi
+                cú nhấp chuột của bạn không chỉ giúp:<br>
+                • Tải trang nhanh hơn<br>
+                • Tiết kiệm dữ liệu (data)<br>
+                • Mà còn trực tiếp giảm dấu chân carbon từ hoạt động số.
+            </div>
+        </div>
+        <div class="banner-icons">
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429203/ChatGPT_Image_20_59_33_22_thg_6_2025_copy_2_vemk8m.png"
+                alt="Green Icon" class="banner-icon">
+            <div class="green-popup">
+                <div class="green-popup-header">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429203/ChatGPT_Image_20_59_33_22_thg_6_2025_copy_2_vemk8m.png"
+                        alt="Green Icon" class="green-popup-avatar">
+                    <div class="green-popup-title">
+                        <div>Giao diện Xanh của<br>Trường Đại học Văn Lang</div>
+                    </div>
+                    <span class="green-popup-close">&times;</span>
+                </div>
+                <div class="green-popup-body">
+                    Internet có sạch không?<br>Không hẳn…
+                </div>
+                <a href="#" class="green-popup-btn">
+                    Tìm hiểu về Giao diện xanh <span class="arrow">▶</span>
+                </a>
+            </div>
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429353/image_28_ibam1r.png" alt="Red Icon"
+                class="banner-icon">
+        </div>
+        <script>
+            // Hiện popup khi hover icon xanh hoặc popup
+            const greenIcon = document.querySelector('.banner-icons .banner-icon');
+            const greenPopup = document.querySelector('.banner-icons .green-popup');
+            const closeBtn = document.querySelector('.green-popup-close');
+            if (greenIcon && greenPopup) {
+                greenIcon.addEventListener('mouseenter', () => {
+                    greenPopup.style.display = 'block';
+                });
+                greenIcon.addEventListener('mouseleave', (e) => {
+                    setTimeout(() => {
+                        if (!greenPopup.matches(':hover')) greenPopup.style.display = 'none';
+                    }, 100);
+                });
+                greenPopup.addEventListener('mouseenter', () => {
+                    greenPopup.style.display = 'block';
+                });
+                greenPopup.addEventListener('mouseleave', () => {
+                    greenPopup.style.display = 'none';
+                });
+            }
+            if (closeBtn && greenPopup) {
+                closeBtn.addEventListener('click', () => {
+                    greenPopup.style.display = 'none';
+                });
+            }
+        </script>
     </div>
     <section class="intro-hero">
         <div class="intro-hero-container">
@@ -213,12 +278,6 @@
                 <p>Khoa Mỹ thuật & Thiết kế</p>
             </div>
         </div>
-
-
-
-        <div>
-
-        </div>
     </section>
 
     <section class="training-program-section">
@@ -283,6 +342,136 @@
                 <div class="research-slider-item">Môi trường</div>
             </div>
             <button class="research-arrow right">&#62;</button>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="project-container">
+            <div class="project-left">
+                <h2 class="project-title">Một số dự án</h2>
+                <div class="project-image-wrapper">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752220958/image_40-min_fvwd19.png"
+                        alt="Nhà khoa học soi kính hiển vi" class="project-image" loading="lazy">
+                </div>
+            </div>
+            <div class="project-right">
+                <a href="#" class="project-all-btn">
+                    Khám phá toàn bộ dự án
+                    <span class="project-all-btn-arrow">></span>
+                </a>
+                <div class="project-list">
+                    <div class="project-item">
+                        <div class="project-item-title">Dự án chuyển giao công nghệ sản xuất</div>
+                        <div class="project-item-desc">Dự án chuyển giao công nghệ sản xuất trà thảo mộc</div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-item-title">Nghiên cứu các phương trình khuếch tán</div>
+                        <div class="project-item-desc">Nghiên cứu các phương trình khuếch tán của vật chất hoặc vi sinh
+                            vật bị ảnh hưởng bởi các hiệu ứng ngẫu nhiên</div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-item-title">Phương pháp tổng hợp cải thiện hiệu quả</div>
+                        <div class="project-item-desc">Phương pháp tổng hợp cải thiện hiệu quả phân biệt hình dạng xung
+                            của máy đo nhấp nháy sử dụng chất lỏng EJ-301</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="science-hero-section">
+        <div class="science-hero-container">
+            <div class="science-hero-left">
+                <h2 class="science-hero-title">Nghiên cứu khoa học:<br>Chìa khóa mở ra thế giới mới</h2>
+                <a href="#" class="science-hero-btn">
+                    Khám phá ngay
+                    <span class="science-hero-btn-arrow">></span>
+                </a>
+            </div>
+            <div class="science-hero-right">
+                <div class="science-hero-desc">
+                    Văn Lang luôn ý thức được vai trò then chốt của nghiên cứu khoa học trong đóng góp tri thức mới cho
+                    xã hội. Các hoạt động nghiên cứu khoa học luôn được Văn Lang chú trọng đầu tư, qua đó giúp nhà
+                    trường thực hiện cam kết nâng cao chất lượng đào tạo, phát triển năng lực nghiên cứu đạt chuẩn quốc
+                    tế.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partner-section">
+        <div class="partner-header-row">
+            <h2 class="partner-title">Các đối tác chiến lược</h2>
+            <div class="partner-desc">
+                Trường Đại học Văn Lang tự hào là đối tác của các đại học, viện nghiên cứu, doanh nghiệp, tập đoàn hàng
+                đầu thế giới. Những mối quan hệ đối tác đa dạng nhiều lĩnh vực của Văn Lang mở ra nhiều cơ hội cho người
+                học làm giàu thêm kiến thức và trải nghiệm toàn cầu của chính mình.
+            </div>
+        </div>
+        <div class="partner-slider-row">
+            <button class="partner-arrow left">&#60;</button>
+            <div class="partner-logos">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752247384/image_10_ip73go.png"
+                    alt="Newcastle University" class="partner-logo" loading="lazy">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752247848/image_11_qxqmry.png" alt="ASU"
+                    class="partner-logo" loading="lazy">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752247979/image_13_mxo0g1.png"
+                    alt="Waikato University" class="partner-logo" loading="lazy">
+            </div>
+            <button class="partner-arrow right">&#62;</button>
+        </div>
+    </section>
+
+    <section class="blog-share-section">
+        <div class="blog-share">
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752250413/image_14-min_l9yexo.png"
+                alt="blog-share-img" class="blog-share-img" loading="lazy">
+        </div>
+        <div class="blog-share-content">
+            <p class="blog-share-content-text">
+                "Sau khi trở về từ Mỹ, tôi đã quyết định theo học ngành Quản trị sự kiện thuộc Viện Đào tạo Quốc tế tại
+                trường Đại học Văn Lang. Tôi đã có rất nhiều cơ hội để thực hành, ứng dụng kiến thức vào thực tế trong
+                môi trường học tập rất chuyên nghiệp. Không những thế, các thầy cô cũng vô cùng sẵn lòng khi chia sẻ
+                không chỉ về kiến thức chuyên môn, mà còn là những kinh nghiệm sống, để giúp tôi trưởng thành mỗi ngày.
+                Tôi đã có cơ hội tham gia những hoạt động ngoại khóa, hội thảo và những hoạt động thú vị khác cùng với
+                những người bạn của mình. Tại Văn Lang, tôi đã có những người bạn tuyệt vời, chúng tôi cùng nhau học,
+                cùng nhau trưởng thành và sẵn sàng đối mặt với những thử thách cùng nhau. Tôi rất tự hào khi nói Viện
+                Đào tạo Quốc tế là lựa chọn đúng đắn để tôi học tập và phát triển bản thân."
+            </p>
+            <div class="blog-share-content-info">
+                <p>Sinh viên</p>
+                <p>Lê Uyên Thi</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="learning">
+            <div class="learning-top">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752298859/image_22_hsp4it.png"
+                    alt="learning-img" class="learning-img" loading="lazy">
+                <a href="#" class="learning-top-link">
+                    Khám phá toàn bộ dự án
+                    <span class="learning-top-link-arrow">></span>
+                </a>
+            </div>
+            <div class="vision-mission-section">
+                <div class="vision-mission-box vision">
+                    <h3>Tầm nhìn & Sứ mệnh</h3>
+                    <p>
+                        Khát vọng của Văn Lang là trở thành một trong những trường đại học trẻ được ngưỡng mộ nhất châu
+                        Á vào năm 2030. Văn Lang đào tạo người học trở thành những con người học tập suốt đời và mang
+                        lại tác động tích cực truyền cảm hứng cho xã hội.
+                    </p>
+                </div>
+                <div class="vision-mission-box philosophy">
+                    <h3>Triết lý giáo dục</h3>
+                    <p>
+                        Thông qua học tập trải nghiệm, Trường Đại học Văn Lang đào tạo những con người toàn diện, có khả
+                        năng học tập suốt đời, có đạo đức, có sức ảnh hưởng và mang lại thay đổi tích cực cho cộng đồng.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -425,6 +614,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
