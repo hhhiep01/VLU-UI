@@ -2698,3 +2698,495 @@ section {
   margin-left: 8px;
   font-size: 1.1em;
 }
+
+/* ==== VLU Training Program Section (class mới, style riêng biệt) ==== */
+.vlu-training-section {
+  margin: 60px auto 0 auto;
+  max-width: 1200px;
+  padding: 0 24px 32px 24px;
+  background: #fff;
+}
+.vlu-training-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.vlu-training-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 0;
+}
+.vlu-training-desc {
+  font-size: 1rem;
+  color: #222;
+  max-width: 400px;
+  margin-left: 24px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+.vlu-training-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px 32px;
+}
+.vlu-training-card {
+  border-radius: 24px;
+  padding: 32px 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  background: #f7f7f7;
+  min-height: 220px;
+}
+.vlu-training-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.vlu-training-card-desc {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.vlu-training-card-btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #c8102e;
+  text-decoration: none;
+  background: none;
+  transition: color 0.2s;
+  margin-top: auto;
+}
+.vlu-training-card-btn .arrow {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.vlu-training-card-standard {
+  background: #d7263d;
+  color: #fff;
+}
+.vlu-training-card-special {
+  background: #1e2250;
+  color: #fff;
+}
+.vlu-training-card-second-degree {
+  background: #ffe3a3;
+}
+.vlu-training-card-second-degree .vlu-training-card-title,
+.vlu-training-card-second-degree .vlu-training-card-desc,
+.vlu-training-card-second-degree .vlu-training-card-btn {
+  color: #d7263d;
+}
+.vlu-training-card-transfer {
+  background: #231616;
+}
+.vlu-training-card-transfer .vlu-training-card-title,
+.vlu-training-card-transfer .vlu-training-card-desc,
+.vlu-training-card-transfer .vlu-training-card-btn {
+  color: #ffe3a3;
+}
+.vlu-training-card-btn:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .vlu-training-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .vlu-training-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .vlu-training-desc {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+
+/* ==== VLU Postgraduate Program Section (class mới, style riêng biệt) ==== */
+.vlu-postgrad-section {
+  background: #231616;
+  padding: 56px 0 64px 0;
+  width: 100vw;
+  margin: 0 auto;
+}
+.vlu-postgrad-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 48px;
+  margin-left: 60px;
+}
+.vlu-postgrad-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.vlu-postgrad-card {
+  border-radius: 20px;
+  padding: 36px 32px 32px 32px;
+  min-width: 380px;
+  max-width: 480px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  font-family: inherit;
+}
+.vlu-postgrad-card-master {
+  background: #d7263d;
+  color: #fff;
+}
+.vlu-postgrad-card-doctor {
+  background: #ffe3a3;
+  color: #b71c1c;
+}
+.vlu-postgrad-card-doctor .vlu-postgrad-card-title {
+  color: #d7263d;
+}
+.vlu-postgrad-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.vlu-postgrad-card-desc {
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.vlu-postgrad-btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  transition: color 0.2s;
+  margin-top: auto;
+  gap: 8px;
+}
+.vlu-postgrad-card-doctor .vlu-postgrad-btn {
+  color: #d7263d;
+}
+.vlu-postgrad-btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #d7263d;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.vlu-postgrad-card-doctor .vlu-postgrad-btn-arrow {
+  background: #d7263d;
+  color: #fff;
+}
+.vlu-postgrad-btn:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .vlu-postgrad-list {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .vlu-postgrad-card {
+    min-width: 220px;
+    max-width: 98vw;
+  }
+  .vlu-postgrad-title {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* --- International Programs Section --- */
+.vlu-international-section {
+  margin: 48px auto 0 auto;
+  max-width: 1200px;
+  padding: 0 24px 40px 24px;
+}
+.vlu-international-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.vlu-international-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 12px;
+}
+.vlu-international-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #222;
+  line-height: 1.2;
+}
+.vlu-international-desc {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 24px;
+  max-width: 350px;
+}
+.vlu-international-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 24px;
+  padding: 8px 22px 8px 18px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+.vlu-international-btn .arrow {
+  margin-left: 10px;
+  font-size: 1.1em;
+  color: #fff;
+}
+.vlu-international-btn:hover {
+  background: #e63946;
+  color: #fff;
+}
+.vlu-international-cards {
+  flex: 1 1 62%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 52px 52px;
+}
+.vlu-international-card {
+  border-radius: 24px;
+  padding: 28px 32px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 170px;
+}
+.vlu-international-card-bachelor {
+  background: #d7263d;
+  color: #fff;
+  margin-left: 50px;
+}
+.vlu-international-card-master {
+  background: #ffe19e;
+  color: #b22234;
+}
+.vlu-international-card-doctor {
+  background: #181b3a;
+  color: #fff;
+}
+.vlu-international-card-link {
+  background: #fff;
+  color: #d7263d;
+  border: 2px solid #ffe19e;
+}
+.vlu-international-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.vlu-international-card-desc {
+  font-size: 1rem;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+.vlu-international-card-btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.2s;
+}
+.vlu-international-card-btn .arrow {
+  margin-left: 8px;
+  font-size: 1.1em;
+}
+.vlu-international-card-bachelor .vlu-international-card-btn {
+  color: #ffe19e;
+}
+.vlu-international-card-master .vlu-international-card-btn {
+  color: #d7263d;
+}
+.vlu-international-card-doctor .vlu-international-card-btn {
+  color: #e63946;
+}
+.vlu-international-card-link .vlu-international-card-btn {
+  color: #d7263d;
+}
+.vlu-international-card-btn:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .vlu-international-flex {
+    flex-direction: column;
+    gap: 32px 0;
+  }
+  .vlu-international-left {
+    max-width: 100%;
+  }
+  .vlu-international-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 24px 0;
+  }
+  .vlu-international-card {
+    min-width: 0;
+  }
+}
+
+/* --- Team Section --- */
+.vlu-team-section {
+  background: #181b3a;
+  padding: 56px 0 56px 0;
+  color: #ffe19e;
+}
+.vlu-team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+}
+.vlu-team-left {
+  flex: 1.2;
+}
+.vlu-team-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #ffe19e;
+}
+.vlu-team-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+.vlu-team-card {
+  background: #23265a;
+  border-radius: 28px;
+  overflow: hidden;
+  width: 300px;
+  min-width: 260px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+}
+.vlu-team-img {
+  width: 100%;
+  height: 78%;
+  object-fit: cover;
+  border-radius: 28px 28px 0 0;
+  display: block;
+}
+.vlu-team-info {
+  padding: 18px 20px 20px 20px;
+  color: #fff;
+}
+.vlu-team-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.vlu-team-role {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+.vlu-team-arrow {
+  background: #ffe19e;
+  color: #181b3a;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: background 0.2s;
+}
+.vlu-team-arrow:hover {
+  background: #fff;
+}
+.vlu-team-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 24px;
+}
+.vlu-team-desc {
+  font-size: 1.08rem;
+  color: #fff;
+  margin-bottom: 32px;
+  max-width: 340px;
+  line-height: 1.6;
+}
+.vlu-team-more {
+  color: #e63946;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.08rem;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.vlu-team-more .arrow {
+  margin-left: 8px;
+  font-size: 1.1em;
+}
+.vlu-team-more:hover {
+  color: #ffe19e;
+}
+@media (max-width: 1100px) {
+  .vlu-team-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .vlu-team-right {
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+  }
+}
