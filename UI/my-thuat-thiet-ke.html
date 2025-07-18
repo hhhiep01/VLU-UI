@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoa Mỹ thuật & Thiết kế - VLU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-center">
+                <ul class="nav-menu nav-menu-top">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#">Sinh viên</a></li>
+                    <li><a href="#">Nhân viên</a></li>
+                    <li><a href="#">Cựu sinh viên</a></li>
+                </ul>
+                <div class="nav-bottom-row">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094669/Layer_1_xtetxw.png"
+                        alt="Van Lang University Logo" class="logo-img">
+                    <ul class="nav-menu nav-menu-bottom">
+                        <li><a href="#">Về Văn Lang</a></li>
+                        <li><a href="dao-tao.html">Đào Tạo</a></li>
+                        <li><a href="#">Tuyển Sinh</a></li>
+                        <li><a href="#">Nghiên cứu khoa học</a></li>
+                        <li><a href="#">Đời sống Văn Lang</a></li>
+                        <li><a href="#">Tin tức sự kiện</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095320/search-sm_gnpxhd.png"
+                    alt="Search" class="nav-search-img" loading="lazy">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095410/calendar_i6kph6.png"
+                    alt="Calendar" class="nav-calendar-img" loading="lazy">
+                <div class="nav-flag-group">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094984/Frame_1_gpkmvb.png"
+                        alt="Vietnam Flag" class="nav-flag-img" loading="lazy">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095667/chevron-right_hb5dln.png"
+                        alt="Chevron Down" class="nav-chevron-img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="news-banner" style="position:relative;overflow:hidden;">
+        <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752735059/banner_002_645990e6f5_copy_opw1zp.webp"
+            alt="Banner Tin tức & Sự kiện"
+            style="width:100%;max-width:100%;display:block;margin:0 auto;filter:brightness(0.55);">
+        <div class="banner-overlay-text"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:60px;padding-top:60px;z-index:2;">
+            <h1 style="font-size:3.2rem;font-weight:800;line-height:1.1;margin-bottom:32px;color:#fff;">
+                <span style="display:block;margin-bottom:4px;">Khoa Mỹ thuật & Thiết kế</span>
+            </h1>
+            <div
+                style="font-size:1.1rem;font-weight:400;margin-top:24px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.3);max-width:600px;">
+                Là Khoa thuộc trường Đại học Văn Lang, một trong những nơi đào tạo các ngành thiết kế có chất lượng hàng
+                đầu Việt Nam. Đồng thời cũng là nơi tiên phong trong việc phát triển và nghiên cứu sáng tạo nghệ thuật
+                kết hợp giữa nét đẹp Đông phương và Tây phương, góp phần mang nét đẹp của mỹ thuật và thiết kế Việt Nam
+                vươn tầm quốc tế.  
+            </div>
+        </div>
+        <div class="banner-icons">
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429203/ChatGPT_Image_20_59_33_22_thg_6_2025_copy_2_vemk8m.png"
+                alt="Green Icon" class="banner-icon">
+            <div class="green-popup">
+                <div class="green-popup-header">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429203/ChatGPT_Image_20_59_33_22_thg_6_2025_copy_2_vemk8m.png"
+                        alt="Green Icon" class="green-popup-avatar">
+                    <div class="green-popup-title">
+                        <div>Giao diện Xanh của<br>Trường Đại học Văn Lang</div>
+                    </div>
+                    <span class="green-popup-close">&times;</span>
+                </div>
+                <div class="green-popup-body">
+                    Internet có sạch không?<br>Không hẳn…
+                </div>
+                <a href="#" class="green-popup-btn">
+                    Tìm hiểu về Giao diện xanh <span class="arrow">▶</span>
+                </a>
+            </div>
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429353/image_28_ibam1r.png" alt="Red Icon"
+                class="banner-icon">
+        </div>
+        <script>
+            // Hiện popup khi hover icon xanh hoặc popup
+            const greenIcon = document.querySelector('.banner-icons .banner-icon');
+            const greenPopup = document.querySelector('.banner-icons .green-popup');
+            const closeBtn = document.querySelector('.green-popup-close');
+            if (greenIcon && greenPopup) {
+                greenIcon.addEventListener('mouseenter', () => {
+                    greenPopup.style.display = 'block';
+                });
+                greenIcon.addEventListener('mouseleave', (e) => {
+                    setTimeout(() => {
+                        if (!greenPopup.matches(':hover')) greenPopup.style.display = 'none';
+                    }, 100);
+                });
+                greenPopup.addEventListener('mouseenter', () => {
+                    greenPopup.style.display = 'block';
+                });
+                greenPopup.addEventListener('mouseleave', () => {
+                    greenPopup.style.display = 'none';
+                });
+            }
+            if (closeBtn && greenPopup) {
+                closeBtn.addEventListener('click', () => {
+                    greenPopup.style.display = 'none';
+                });
+            }
+        </script>
+    </div>
+    <!-- Tabs Section dưới banner -->
+    <div class="faculty-tabs">
+        <div class="faculty-tab faculty-tab-active">Tổng quan</div>
+        <div class="faculty-tab">Ngành</div>
+        <div class="faculty-tab">Đội ngũ</div>
+    </div>
+    <!-- End Tabs Section -->
+    <section class="dean-section">
+        <div class="dean-container">
+            <div class="dean-img-col">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752727859/Rectangle_36-min_ooajre.png"
+                    alt="ThS. HS. Phan Quân Dũng" class="dean-img">
+            </div>
+            <div class="dean-content-col">
+                <div class="dean-quote">
+                    "Bên cạnh hệ thống cơ sở vật chất hiện đại của Trường Đại học Văn Lang, Khoa Mỹ thuật & Thiết kế đã
+                    xây dựng được đội ngũ giảng viên có chuyên môn vững – 100% giảng viên của Khoa đều có trình độ từ
+                    Thạc sĩ trở lên, tốt nghiệp từ các cơ sở đào tạo danh tiếng trong và ngoài nước; các giảng viên đều
+                    có kinh nghiệm, kiến thức, và lòng nhiệt huyết, đam mê với nghề.\nVới những thuận lợi đó, Khoa đã
+                    đào tạo hơn 5.000 cử nhân làm thiết kế trong các lĩnh vực Thiết kế Đồ họa, Thiết kế Nội thất, Thiết
+                    kế Công nghiệp, Thiết kế Thời trang và Thiết kế Mỹ thuật số. Chúng tôi hy vọng rằng, với khả năng
+                    của mình và nhu cầu thực tiễn đời sống, các ngành học mà chúng tôi đào tạo sẽ góp phần hiện thực hóa
+                    nguyện vọng của sinh viên cũng như các bậc phụ huynh.”
+                </div>
+                <div class="dean-info">
+                    <div>Trưởng khoa</div>
+                    <div class="dean-name">ThS. HS. Phan Quân Dũng</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="intro-hero">
+        <div>
+            <div class="about-vlu-container">
+                <h2 style="width: 500px;">Thành tựu & Con số
+                    nổi bật</h2>
+                <p style="margin-left: 500px;">Hơn 15 năm nay, Khoa Mỹ thuật & Thiết kế thuộc trường Đại học Văn Lang
+                    là một trong số những trường
+                    đại học ở Việt Nam dẫn đầu về số lượng sinh viên đạt được khá nhiều các giải thưởng ở cấp quốc gia,
+                    cấp khu vực và quốc tế.</p>
+            </div>
+            <div>
+                <div class="ranking-image">
+                    <div class="arrow-ranking-left">></div>
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751891977/Frame_52_nkuz4f.png"
+                        alt="ranking" class="ranking" loading="lazy">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751893063/Frame_53_s3ninq.png"
+                        alt="ranking" class="ranking" loading="lazy">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751893140/Frame_54_xjjqho.png"
+                        alt="ranking" class="ranking" loading="lazy">
+                    <div class="arrow-ranking-right">></div>
+                </div>
+            </div>
+            <div class="ranking-image-bottom">
+                <!-- Đã xóa <img class='full-width-img'>, hình nền sẽ chuyển sang CSS của .milestone-section -->
+            </div>
+        </div>
+        <div class="milestone-section">
+            <div class="milestone-left">
+                <span class="milestone-title">Khám phá các cột mốc</span>
+                <button class="milestone-btn">></button>
+            </div>
+            <div class="milestone-right">
+                <div class="milestone-item">
+                    <div class="milestone-number">145.000+</div>
+                    <div class="milestone-desc">Người học lựa chọn</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">60</div>
+                    <div class="milestone-desc">Ngành đào tạo đại học<br>cho phép sinh viên linh hoạt lựa chọn</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">400+</div>
+                    <div class="milestone-desc">bài công bố khoa học<br>cùng nhiều dự án nghiên cứu hướng đến giải
+                        quyết các vấn đề của xã hội</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="features-container">
+            <div class="features-left">
+                <h2 class="features-title">Đặc điểm nổi bật</h2>
+                <p class="features-description">
+                    Với sứ mệnh đào tạo nguồn nhân lực chất lượng cao, chúng tôi luôn ưu tiên xây dựng và duy trì một
+                    môi trường sáng tạo, nơi có thể thúc đẩy được cá tính riêng của mỗi cá nhân nhưng vẫn cộng hưởng
+                    chung với bản sắc của Cộng đồng Văn Lang.
+                </p>
+                <div class="features-image">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752813865/image_41-min_f3l6wr.png"
+                        alt="Đội ngũ giảng viên và sinh viên" class="features-main-img" loading="lazy">
+                </div>
+            </div>
+            <div class="features-right">
+                <div class="feature-item">
+                    <h3 class="feature-title">Chương trình đào tạo mang tính ứng dụng</h3>
+                    <p class="feature-description">
+                        Chương trình đào tạo của các ngành có tính thực tế, mang chiến lược lâu dài, đào tạo trọng tâm
+                        các nội dung về lĩnh vực Mỹ thuật và Thiết kế mà đất nước đang cần.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-title">Cung cấp nguồn nhân lực chất lượng</h3>
+                    <p class="feature-description">
+                        Các chương trình đều đảm bảo sinh viên sau khi tốt nghiệp có trình độ và năng lực chuyên môn cao
+                        trong lĩnh vực Mỹ thuật & Thiết kế, đáp ứng nhu cầu hội nhập quốc tế và phát triển bền vững hiện
+                        nay.
+                    </p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-title">Cơ sở vật chất hiện đại, đội ngũ giảng viên chất lượng cao</h3>
+                    <p class="feature-description">
+                        Với quy mô gần 3000m², Khoa chú trọng thiết kế tối ưu các phòng học lý thuyết và xưởng thực hành
+                        để đảm bảo cung cấp cho sinh viên môi trường học tập tốt nhất. Cùng với đó, đội ngũ giảng viên
+                        dày dạn kinh nghiệm cũng chính là một trong những yếu tố đảm bảo chất lượng đào tạo xuyên suốt
+                        trong những năm qua.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="programs-section">
+        <div class="programs-container">
+            <div class="programs-left">
+                <h2 class="programs-title">Các ngành đào tạo</h2>
+                <p class="programs-description">
+                    Hiện nay Khoa Mỹ thuật & Thiết kế đang đào tạo 5 ngành hệ Đại học: Thiết kế Đồ họa, Thiết kế Nội
+                    thất, Thiết kế Thời trang, Thiết kế Công nghiệp, Thiết kế Mỹ thuật số và 3 chuyên ngành hẹp: Thiết
+                    kế Đồ họa Minh họa; Xây dựng thương hiệu và Quản trị thời trang; Thiết kế trang thiết bị Nội thất.
+                    Ngoài ra, Khoa còn đào tạo 1 ngành hệ Sau đại học: Mỹ thuật Ứng dụng.
+                </p>
+                <button class="programs-btn">
+                    Khám phá các ngành <span class="programs-btn-arrow">></span>
+                </button>
+            </div>
+            <div class="programs-right">
+                <div class="programs-grid">
+                    <div class="program-box program-red"><span>Thiết kế Đồ họa</span></div>
+                    <div class="program-box program-blue"><span>Thiết kế Thời Trang</span></div>
+                    <div class="program-box program-blue"><span>Thiết kế Nội thất</span></div>
+                    <div class="program-box program-red"><span>Thiết kế Mỹ Thuật Số</span></div>
+                    <div class="program-box program-red"><span>Thiết kế Công Nghiệp</span></div>
+                    <div class="program-box program-blue"><span>Thạc sĩ lý luận mỹ thuật Ứng dụng</span></div>
+                    <div class="program-box program-blue"><span>Thạc sĩ mỹ thuật Ứng dụng</span></div>
+                    <div class="program-box program-red"><span>Thạc sĩ Lý luận và Lịch sử Mỹ thuật Ứng dụng</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners-section">
+        <div class="partners-header-row">
+            <h2 class="partners-title">Đối tác của chúng tôi</h2>
+            <div class="partners-desc">
+                Khoa Mỹ thuật & Thiết kế tự hào khi có mối quan hệ hợp tác với các đơn vị lớn trong và ngoài nước.
+            </div>
+        </div>
+        <div class="partners-slider-row">
+            <button class="partners-arrow left">&#60;</button>
+            <div class="partners-logos">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752828135/image_29_yfyvdr.png"
+                    alt="Handong Global University" class="partner-logo" loading="lazy">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752828193/image_30_rxgtnj.png"
+                    alt="Sparx*" class="partner-logo" loading="lazy">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752828367/image_32_cpcdep.png"
+                    alt="District Eight" class="partner-logo" loading="lazy">
+            </div>
+            <button class="partners-arrow right">&#62;</button>
+        </div>
+    </section>
+    <section class="team-section">
+        <div class="team-header-row">
+            <div class="team-header-left">
+                <h2 class="team-title">Đội ngũ của chúng tôi</h2>
+                <div class="team-desc">
+                    Đội ngũ của Khoa Mỹ thuật & Thiết kế là những chuyên gia thiết kế với nhiều năm kinh nghiệm, trong
+                    đó có các giảng viên được đào tạo từ nước ngoài (Italy, Nga, Trung Quốc, Đài Loan, Hàn Quốc,...) và
+                    các giảng viên đến từ nhiều quốc gia khác nhau (Hàn Quốc, Malaysia,...).
+                </div>
+            </div>
+            <div class="team-header-right">
+                <button class="team-btn">Khám phá đội ngũ của chúng tôi <span
+                        class="team-btn-arrow">&#62;</span></button>
+            </div>
+        </div>
+        <div class="team-slider-row">
+            <button class="team-arrow left">&#60;</button>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752727859/Rectangle_36-min_ooajre.png"
+                        alt="ThS. Phan Quân Dũng" class="team-img" loading="lazy">
+                    <div class="team-info">
+                        <div class="team-name">ThS. Phan Quân Dũng</div>
+                        <div class="team-role team-role-main">Trưởng khoa</div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752839421/Rectangle_37-min_tihybt.png"
+                        alt="TS. Nguyễn Đắc Thái" class="team-img" loading="lazy">
+                    <div class="team-info">
+                        <div class="team-name">TS. Nguyễn Đắc Thái</div>
+                        <div class="team-role team-role-sub">Phó khoa</div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752839444/Rectangle_38-min_nx1vow.png"
+                        alt="TS. Đỗ Anh Tuấn" class="team-img" loading="lazy">
+                    <div class="team-info">
+                        <div class="team-name">TS. Đỗ Anh Tuấn</div>
+                        <div class="team-role team-role-sub">Phó Khoa</div>
+                        <div class="team-role team-role-major">Trưởng ngành Thiết kế Công nghiệp</div>
+                    </div>
+                </div>
+            </div>
+            <button class="team-arrow right">&#62;</button>
+        </div>
+    </section>
+    <section class="news-section">
+        <div class="news-container">
+            <div class="news-header">
+                <h2 class="news-title">Tin tức & Sự kiện nổi bật</h2>
+                <a href="#" class="news-all-btn">
+                    Xem toàn bộ Tin tức & Sự kiện
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751104366/Frame_1_2_jbomxo.png"
+                        alt="Mũi tên" class="news-btn-arrow-img" style="height:18px;" loading="lazy">
+                </a>
+            </div>
+            <div class="news-content">
+                <div class="news-main-img">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/f_auto,q_auto,w_790/v1751099283/image_5_pztpsc.png"
+                        alt="Sự kiện nổi bật" loading="lazy">
+                </div>
+                <div class="news-side">
+                    <div class="news-card">
+                        <img src="https://res.cloudinary.com/dku0qdaan/image/upload/f_auto,q_auto,w_400/v1751099550/image_6_m9heqf.png"
+                            alt="Hợp tác quốc tế" loading="lazy">
+                        <div class="news-card-content">
+                            <div class="news-card-title red">HỢP TÁC QUỐC TẾ</div>
+                            <div class="news-card-desc">Suy ngẫm về sự phát triển của y tế số qua bài giảng đại chúng
+                                của ...</div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://res.cloudinary.com/dku0qdaan/image/upload/f_auto,q_auto,w_400/v1751099682/image_7_lakkw8.png"
+                            alt="Tuyển sinh" loading="lazy">
+                        <div class="news-card-content">
+                            <div class="news-card-title red">TUYỂN SINH</div>
+                            <div class="news-card-desc">Trường Đại học Văn Lang tuyển sinh đại học Văn bằng 2 hệ ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-highlight">
+                <div class="news-highlight-title red">HOẠT ĐỘNG CỦA VĂN LANG</div>
+                <div class="news-highlight-desc">Khảo sát chính thức phục vụ kiểm định ngành Thiết kế Công nghiệp, Dược
+                    học, Thanh nhạc, Quản trị Nhà hàng, Ngôn ngữ Trung Quốc</div>
+            </div>
+        </div>
+    </section>
+    <section class="blog-share-section">
+        <div class="blog-share">
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752678082/image_14-min_1_rdkosc.png"
+                alt="blog-share-img" class="blog-share-img" loading="lazy">
+        </div>
+        <div class="blog-share-content">
+            <p class="blog-share-content-text">
+                "Nên tích cực tự học và luôn sáng tạo để có chỗ đứng trong Ngành Thiết kế – một môi trường đòi hỏi nhiều
+                sự cố gắng và đổi mới liên tục. Sáng tạo là không giới hạn."
+            </p>
+            <div class="blog-share-content-info">
+                <p>Cựu sinh viên Khoa Mỹ thuật & Thiết kế</p>
+                <p>Hồ Hoàng Ngọc Thy</p>
+            </div>
+        </div>
+    </section>
+    <section class="life-at-vlu-section">
+        <div class="life-at-vlu-content">
+            <div class="life-at-vlu-left">
+                <div class="life-at-vlu-left-container">
+                    <h2 class="life-at-vlu-title">Thư viện ảnh</h2>
+                    <a href="#" class="life-at-vlu-btn">
+                        Tìm hiểu Life at VLU
+                        <span class="life-at-vlu-btn-arrow">></span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="life-at-vlu-right">
+                <div class="life-at-vlu-images">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752676523/image_43-min_k6qyfu.png"
+                        alt="Life at VLU Stage" class="life-at-vlu-img-left" loading="lazy">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752652016/image_18-min_r5up67.jpg"
+                        alt="Life at VLU Basketball" class="life-at-vlu-img-right" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-info-section">
+        <div class="contact-info-col">
+            <div class="footer-vlu-title">Thông tin liên hệ</div>
+            <ul class="contact-info-list">
+                <li>PHÒNG TUYỂN SINH VÀ TRUYỀN THÔNG <span class="arrow">›</span></li>
+                <li>VIỆN SAU ĐẠI HỌC <span class="arrow">›</span></li>
+                <li>PHÒNG ĐÀO TẠO <span class="arrow">›</span></li>
+                <li>PHÒNG ĐỐI NGOẠI <span class="arrow">›</span></li>
+                <li>VIỆN ĐÀO TẠO QUỐC TẾ <span class="arrow">›</span></li>
+                <li>TRUNG TÂM KHẢO THÍ <span class="arrow">›</span></li>
+                <li>PHÒNG PHÁT TRIỂN NGHIÊN CỨU KHOA HỌC <span class="arrow">›</span></li>
+                <li>TRUNG TÂM HỖ TRỢ SINH VIÊN <span class="arrow">›</span></li>
+                <li>TRUNG TÂM PHÁT TRIỂN NĂNG LỰC SINH VIÊN <span class="arrow">›</span></li>
+                <li>PHÒNG CÔNG NGHỆ THÔNG TIN <span class="arrow">›</span></li>
+                <li>PHÒNG HÀNH CHÍNH VÀ QUẢN TRỊ NGUỒN NHÂN LỰC <span class="arrow">›</span></li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer-vlu">
+        <div class="footer-vlu-main">
+            <div class="footer-vlu-group">
+                <div class="footer-vlu-col footer-vlu-logo-contact">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094669/Layer_1_xtetxw.png"
+                        alt="Van Lang University Logo" class="logo-img" loading="lazy">
+                    <div class="footer-vlu-contact-item"><span>Email</span><br>info@vlu.edu.vn</div>
+                    <div class="footer-vlu-contact-item"><span>Đào tạo</span><br>028.7109.9221</div>
+                    <div class="footer-vlu-contact-item"><span>Tuyển sinh</span><br>028.7105.9999</div>
+                    <div class="footer-vlu-contact-item"><span>Hỗ trợ Sinh Viên (Call Center)</span><br>028.7106.1111
+                    </div>
+                </div>
+                <div class="footer-vlu-cols">
+                    <div class="footer-vlu-col about-col">
+                        <div class="footer-vlu-title">Về chúng tôi</div>
+                        <ul>
+                            <li>Tin tức</li>
+                            <li>Sự kiện</li>
+                            <li>Tuyển dụng</li>
+                            <li>Đảm bảo chất lượng đào tạo</li>
+                            <li>Trung tâm khảo thí tiếng anh</li>
+                        </ul>
+                    </div>
+                    <div class="footer-vlu-col quick-col">
+                        <div class="footer-vlu-title">Truy cập nhanh</div>
+                        <ul>
+                            <li>Hệ thống Văn bản</li>
+                            <li>Hệ thống E-Learning</li>
+                            <li>Thư viện</li>
+                            <li>HUB</li>
+                            <li>E-job</li>
+                        </ul>
+                    </div>
+                    <div class="footer-vlu-col follow-col">
+                        <div class="footer-vlu-title">Theo dõi</div>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Youtube</li>
+                            <li>Instagram</li>
+                            <li>Tiktok</li>
+                        </ul>
+                    </div>
+                    <div class="footer-vlu-col school-col">
+                        <div class="footer-vlu-title">Các trường và khối đào tạo</div>
+                        <ul>
+                            <li>Du lịch</li>
+                            <li>Kiến Trúc</li>
+                            <li>Khoa học sức khỏe</li>
+                            <li>Công nghệ - Kỹ thuật</li>
+                            <li>Kinh doanh - Quản lý</li>
+                            <li>Thiết kế - Nghệ Thuật</li>
+                            <li>Luật - Xã hội Nhân văn - Truyền thông</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-vlu-bottom">
+                <div class="footer-vlu-bottom-left">© 2022 Van Lang University. All rights reserved.</div>
+                <div class="footer-vlu-bottom-center">
+                    <a href="#">Điều khoản</a>
+                    <a href="#">Chính sách Bảo mật</a>
+                    <div class="footer-vlu-bottom-right">Copyright</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
