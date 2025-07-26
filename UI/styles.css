@@ -4211,3 +4211,409 @@ section {
   margin-bottom: 50px;
   justify-content: center;
 }
+
+.dream-section {
+  background: #231616;
+  color: #fff;
+  padding: 56px 0 48px 0;
+}
+.dream-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.dream-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 48px;
+  line-height: 1.2;
+}
+.dream-content {
+  display: flex;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+.dream-col {
+  flex: 1 1 0;
+  min-width: 320px;
+}
+.dream-col-title {
+  color: #ffc233;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.dream-col-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .dream-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .dream-title {
+    font-size: 2rem;
+  }
+}
+.admission-section {
+  padding: 40px 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admission-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.admission-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.admission-card {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.admission-card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.admission-card-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.admission-card-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admission-card-link span {
+  margin-left: 5px;
+}
+
+.admission-card-red {
+  background: #d62c3f;
+}
+
+.admission-card-yellow {
+  background: #fbdc9c;
+  color: #c52334;
+}
+
+.admission-card-yellow .admission-card-link {
+  color: #c52334;
+}
+
+.admission-card-dark {
+  background: #1f1f50;
+}
+
+.advisory-section {
+  background: #1f1f50;
+  padding: 50px 0;
+}
+
+.advisory-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.advisory-left {
+  flex: 1;
+  color: #fff;
+}
+
+.advisory-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.advisory-list {
+  list-style: none;
+  padding: 0;
+}
+
+.advisory-list li {
+  font-size: 16px;
+  padding: 12px 0; /* tạo khoảng cách trên và dưới */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.advisory-list li span {
+  margin-left: 1px;
+}
+
+.advisory-form {
+  flex: 1;
+  background: #ffc444;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.advisory-form input[type="text"],
+.advisory-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.advisory-form .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.form-group label {
+  margin-right: 10px;
+}
+
+.advisory-submit-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.international-program-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.international-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.international-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.international-card {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #d62c3f;
+}
+
+.card-link span {
+  margin-left: 5px;
+}
+
+.international-card.yellow {
+  background: #fbdc9c;
+  color: #c52334;
+}
+
+.international-card.dark {
+  background: #1f1f50;
+  color: #fff;
+}
+
+.international-card.dark .card-link {
+  color: #ff5a5a;
+}
+
+.student-services-section {
+  background: #f3f6ff;
+  padding: 50px 0;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.services-left {
+  flex: 1;
+}
+
+.services-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.services-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.services-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.services-btn span {
+  margin-left: 5px;
+  color: #d62c3f;
+}
+
+.services-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.service-card {
+  padding: 30px 0;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.service-card.red {
+  background: #d62c3f;
+}
+
+.service-card.dark {
+  background: #1f1f50;
+  color: #fbdc9c;
+}
+.scholarship-section {
+  background: #2a0e0d;
+  padding: 50px 0;
+  color: #fff;
+}
+
+.scholarship-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.scholarship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.scholarship-title {
+  font-size: 28px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.scholarship-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.scholarship-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.scholarship-card {
+  flex: 1;
+  min-width: 280px;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.scholarship-card.red {
+  background: #d62c3f;
+  color: #fff;
+}
+
+.scholarship-card.yellow {
+  background: #fbdc9c;
+  color: #c52334;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.scholarship-card ul {
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+.scholarship-card ul li {
+  margin-bottom: 6px;
+}

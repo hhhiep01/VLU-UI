@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển Sinh - VLU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-center">
+                <ul class="nav-menu nav-menu-top">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#">Sinh viên</a></li>
+                    <li><a href="#">Nhân viên</a></li>
+                    <li><a href="#">Cựu sinh viên</a></li>
+                </ul>
+                <div class="nav-bottom-row">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094669/Layer_1_xtetxw.png"
+                        alt="Van Lang University Logo" class="logo-img">
+                    <ul class="nav-menu nav-menu-bottom">
+                        <li><a href="#">Về Văn Lang</a></li>
+                        <li><a href="dao-tao.html">Đào Tạo</a></li>
+                        <li><a href="#">Tuyển Sinh</a></li>
+                        <li><a href="#">Nghiên cứu khoa học</a></li>
+                        <li><a href="#">Đời sống Văn Lang</a></li>
+                        <li class="active"><a href="tin-tuc.html">Tin tức sự kiện</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095320/search-sm_gnpxhd.png"
+                    alt="Search" class="nav-search-img" loading="lazy">
+                <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095410/calendar_i6kph6.png"
+                    alt="Calendar" class="nav-calendar-img" loading="lazy">
+                <div class="nav-flag-group">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094984/Frame_1_gpkmvb.png"
+                        alt="Vietnam Flag" class="nav-flag-img" loading="lazy">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751095667/chevron-right_hb5dln.png"
+                        alt="Chevron Down" class="nav-chevron-img" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="news-banner" style="position:relative;overflow:hidden;">
+        <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1753292591/VLU_BANNER_WEB_10_8a1f9b6bd0_copy_onj3l0.webp"
+            alt="Banner Tin tức & Sự kiện"
+            style="width:100%;max-width:100%;display:block;margin:0 auto;filter:brightness(0.55);">
+        <div class="banner-overlay-text"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:60px;padding-top:60px;z-index:2;">
+            <h1 style="font-size:3.2rem;font-weight:800;line-height:1.1;margin-bottom:32px;color:#fff;">
+                <span style="display:block;margin-bottom:4px;">Một bước gần hơn đến tương lai mơ ước</span>
+            </h1>
+            <div
+                style="font-size:1.1rem;font-weight:400;margin-top:24px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.3);max-width:600px;">
+                Tương lai không nằm ở đâu xa - nó vẫn luôn luôn trong tầm với của bạn! Tại đây, Văn Lang sẽ giúp bạn
+                nhận ra điều đó và cùng bạn tạo dựng một tương lai đúng như ý muốn.  
+            </div>
+        </div>
+        <div class="banner-icons">
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429203/ChatGPT_Image_20_59_33_22_thg_6_2025_copy_2_vemk8m.png"
+                alt="Green Icon" class="banner-icon">
+            <div class="green-popup">
+                <div class="green-popup-header">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429203/ChatGPT_Image_20_59_33_22_thg_6_2025_copy_2_vemk8m.png"
+                        alt="Green Icon" class="green-popup-avatar">
+                    <div class="green-popup-title">
+                        <div>Giao diện Xanh của<br>Trường Đại học Văn Lang</div>
+                    </div>
+                    <span class="green-popup-close">&times;</span>
+                </div>
+                <div class="green-popup-body">
+                    Internet có sạch không?<br>Không hẳn…
+                </div>
+                <a href="#" class="green-popup-btn">
+                    Tìm hiểu về Giao diện xanh <span class="arrow">▶</span>
+                </a>
+            </div>
+            <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1752429353/image_28_ibam1r.png" alt="Red Icon"
+                class="banner-icon">
+        </div>
+        <script>
+            // Hiện popup khi hover icon xanh hoặc popup
+            const greenIcon = document.querySelector('.banner-icons .banner-icon');
+            const greenPopup = document.querySelector('.banner-icons .green-popup');
+            const closeBtn = document.querySelector('.green-popup-close');
+            if (greenIcon && greenPopup) {
+                greenIcon.addEventListener('mouseenter', () => {
+                    greenPopup.style.display = 'block';
+                });
+                greenIcon.addEventListener('mouseleave', (e) => {
+                    setTimeout(() => {
+                        if (!greenPopup.matches(':hover')) greenPopup.style.display = 'none';
+                    }, 100);
+                });
+                greenPopup.addEventListener('mouseenter', () => {
+                    greenPopup.style.display = 'block';
+                });
+                greenPopup.addEventListener('mouseleave', () => {
+                    greenPopup.style.display = 'none';
+                });
+            }
+            if (closeBtn && greenPopup) {
+                closeBtn.addEventListener('click', () => {
+                    greenPopup.style.display = 'none';
+                });
+            }
+        </script>
+    </div>
+    <section class="dream-section">
+        <div class="dream-container">
+            <div class="dream-title">
+                <span>Chỉ cần bạn dám mơ, con đường sẽ luôn rộng mở</span>
+            </div>
+            <div class="dream-content">
+                <div class="dream-col">
+                    <div class="dream-col-title">Đam mê của bạn là gì?</div>
+                    <div class="dream-col-desc">
+                        60 ngành đại học và 14 ngành sau đại học sẽ mở ra cho bạn vô vàn cơ hội xây dựng sự nghiệp như ý
+                        tự chỉnh sở thích và thế mạnh của mình. Và đừng lo nếu bạn chưa xác định được nguyện vọng!<br>
+                        Đội ngũ tư vấn của Văn Lang sẽ theo sát và giúp bạn đạt mọi mục tiêu phát triển đã đề ra!
+                    </div>
+                </div>
+                <div class="dream-col">
+                    <div class="dream-col-title">Khám phá ngay các khoa và chuyên ngành</div>
+                    <div class="dream-col-desc">
+                        Đội ngũ tư vấn của Văn Lang sẽ theo sát và giúp bạn đạt mọi mục tiêu phát triển đã đề ra!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="intro-hero">
+        <div>
+            <div class="about-vlu-container">
+                <h2>Đôi nét về Văn Lang</h2>
+                <p>Những cột mốc đáng nhớ trên suốt hành trình 30 năm truyền cảm hứng của Văn Lang.</p>
+            </div>
+            <div>
+                <div class="ranking-image">
+                    <div class="arrow-ranking-left">></div>
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751891977/Frame_52_nkuz4f.png"
+                        alt="ranking" class="ranking" loading="lazy">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751893063/Frame_53_s3ninq.png"
+                        alt="ranking" class="ranking" loading="lazy">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751893140/Frame_54_xjjqho.png"
+                        alt="ranking" class="ranking" loading="lazy">
+                    <div class="arrow-ranking-right">></div>
+                </div>
+            </div>
+            <div class="ranking-image-bottom">
+                <!-- Đã xóa <img class='full-width-img'>, hình nền sẽ chuyển sang CSS của .milestone-section -->
+            </div>
+        </div>
+        <div class="milestone-section">
+            <div class="milestone-left">
+                <span class="milestone-title">Khám phá các cột mốc</span>
+                <button class="milestone-btn">></button>
+            </div>
+            <div class="milestone-right">
+                <div class="milestone-item">
+                    <div class="milestone-number">40.000+</div>
+                    <div class="milestone-desc">Sinh viên theo học với<br> hệ thống đa ngành<br> đào tạo</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">60</div>
+                    <div class="milestone-desc">Ngành đào tạo đại học<br>cho phép sinh viên linh hoạt lựa chọn</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">400+</div>
+                    <div class="milestone-desc">bài công bố khoa học<br>cùng nhiều dự án nghiên cứu hướng đến giải
+                        quyết các vấn đề của xã hội</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="admission-section">
+        <h2 class="admission-title">Thủ tục xét tuyển</h2>
+        <div class="admission-card-container">
+            <!-- Card 1 -->
+            <div class="admission-card admission-card-red">
+                <h3 class="admission-card-title">Chương trình <br> Cử nhân</h3>
+                <p class="admission-card-desc">
+                    Dành cho thí sinh đã tốt nghiệp THPT và đủ điều kiện xét tuyển vào Đại học Văn Lang.
+                </p>
+                <a href="#" class="admission-card-link">
+                    Xét tuyển Đại học <span>&#9654;</span>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="admission-card admission-card-yellow">
+                <h3 class="admission-card-title">Chương trình <br> Sau đại học</h3>
+                <p class="admission-card-desc">
+                    Chương trình đào tạo nâng cao cho người đã hoàn thành bậc Đại học.
+                </p>
+                <a href="#" class="admission-card-link">
+                    Xét tuyển Sau Đại học <span>&#9654;</span>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="admission-card admission-card-dark">
+                <h3 class="admission-card-title">Chương trình <br> Liên kết quốc tế</h3>
+                <p class="admission-card-desc">
+                    Tạo cơ hội cho người học nhận bằng cấp từ các đại học hàng đầu thế giới.
+                </p>
+                <a href="#" class="admission-card-link">
+                    Xét tuyển Chương trình liên kết <span>&#9654;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="scholarship-section">
+        <div class="scholarship-container">
+
+            <!-- Header -->
+            <div class="scholarship-header">
+                <h2 class="scholarship-title">Học bổng & Hỗ trợ tài chính</h2>
+                <p class="scholarship-desc">
+                    60 ngành đại học và 14 ngành sau đại học sẽ mở ra cho bạn vô vàn cơ hội xây dựng sự nghiệp như ý từ
+                    chính
+                    sở thích và thế mạnh của mình. Và đừng lo nếu bạn chưa xác định được nguyện vọng!<br>
+                    Đội ngũ tư vấn của Văn Lang sẽ theo sát và giúp bạn đạt mọi mục tiêu phát triển đã đề ra!
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="scholarship-card-container">
+                <!-- Card 1 -->
+                <div class="scholarship-card red">
+                    <h3 class="card-title">Học bổng</h3>
+                    <p class="card-desc">
+                        Các học bổng từ Văn Lang và các khoa, hội cựu sinh viên, các tổ chức và doanh nghiệp đối tác,
+                        v.v. nhằm
+                        tuyên dương các thí sinh Trung học Phổ thông và sinh viên Văn Lang có thành tích học tập và rèn
+                        luyện xuất sắc.
+                    </p>
+                    <ul>
+                        <li>Học bổng Đại học</li>
+                        <li>Học bổng Sau Đại học</li>
+                        <li>Học bổng Đại học (Chương trình Liên kết Quốc tế)</li>
+                        <li>Học bổng Sau Đại học (Chương trình Liên kết Quốc tế)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="scholarship-card yellow">
+                    <h3 class="card-title">Hỗ trợ tài chính</h3>
+                    <p class="card-desc">
+                        Các chính sách miễn giảm học phí và hỗ trợ tài chính từ Văn Lang nhằm đồng hành và giúp đỡ sinh
+                        viên trong
+                        suốt quá trình học tập tại trường.
+                    </p>
+                    <ul>
+                        <li>Hỗ trợ tài chính bậc Đại học</li>
+                        <li>Hỗ trợ tài chính bậc Sau đại học</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="student-services-section">
+        <div class="services-container">
+            <!-- Bên trái -->
+            <div class="services-left">
+                <h2 class="services-title">Các dịch vụ chăm sóc sinh viên</h2>
+                <p class="services-desc">
+                    Các dịch vụ tiện lợi và thiết thực để nâng cao chất lượng cuộc sống của sinh viên tại Văn Lang.
+                </p>
+                <a href="#" class="services-btn">Tìm hiểu thêm <span>&#9654;</span></a>
+            </div>
+
+            <!-- Bên phải -->
+            <div class="services-right">
+                <div class="service-card red">VHUB</div>
+                <div class="service-card dark">Elearning</div>
+                <div class="service-card dark">Tham vấn tâm lý</div>
+                <div class="service-card red">EJob</div>
+                <div class="service-card red">Thư viện</div>
+                <div class="service-card dark">Khu ăn uống</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="international-program-section">
+        <h2 class="international-title">Chương trình Liên kết quốc tế</h2>
+        <div class="international-card-container">
+            <!-- Card 1 -->
+            <div class="international-card yellow">
+                <h3 class="card-title">Cơ hội trao đổi sinh viên</h3>
+                <p class="card-desc">
+                    Cơ hội trở thành sinh viên trao đổi tại các trường đại học quốc tế là đối tác của VLU, qua đó làm
+                    giàu trải nghiệm
+                    toàn cầu của mình tại các quốc gia như Hàn Quốc, Nhật Bản, Pháp, Thái Lan,...
+                </p>
+                <a href="#" class="card-link">Tìm hiểu thêm <span>&#9654;</span></a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="international-card dark">
+                <h3 class="card-title">Hỗ trợ cơ hội nghề nghiệp</h3>
+                <p class="card-desc">
+                    &gt;Hơn 90% sinh viên Văn Lang tìm được việc làm phù hợp ngay sau khi tốt nghiệp nhờ vào phương pháp
+                    đào tạo
+                    chú trọng tính thực tiễn và lồng ghép các trải nghiệm thực tế. Khám phá ngay các cơ hội phù hợp với
+                    bạn!
+                </p>
+                <a href="#" class="card-link">Tìm hiểu thêm <span>&#9654;</span></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="advisory-section">
+        <div class="advisory-container">
+            <!-- Bên trái -->
+            <div class="advisory-left">
+                <h2 class="advisory-title">Liên hệ để nhận<br>thông tin tư vấn</h2>
+                <ul class="advisory-list">
+                    <li>Phòng Tuyển sinh và Truyền thông <span>›</span></li>
+                    <li>Ban Phát triển CT Đào tạo Đặc biệt <span>›</span></li>
+                    <li>Viện Sau Đại học <span>›</span></li>
+                    <li>Viện Đào tạo Quốc tế (IEI) <span>›</span></li>
+                    <li>Phòng Đối ngoại <span>›</span></li>
+                </ul>
+            </div>
+
+            <!-- Bên phải -->
+            <div class="advisory-form">
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Họ và tên">
+                        <input type="text" placeholder="Số điện thoại">
+                    </div>
+                    <input type="email" placeholder="Email">
+                    <div class="form-row">
+                        <input type="text" placeholder="Chọn tỉnh thành">
+                        <input type="text" placeholder="Nhập tên trường">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bạn có muốn làm bài kiểm tra tiếng Anh miễn phí?</label><br>
+                        <label><input type="radio" name="test" value="Có"> Có</label>
+                        <label><input type="radio" name="test" value="Không"> Không</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bạn dự định theo học bậc:* </label><br>
+                        <label><input type="radio" name="degree" value="Đại học"> Đại học</label>
+                        <label><input type="radio" name="degree" value="Sau đại học"> Sau đại học</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Chương trình:* </label><br>
+                        <label><input type="radio" name="program" value="Thạc sĩ"> Thạc sĩ</label>
+                        <label><input type="radio" name="program" value="Tiến sĩ"> Tiến sĩ</label>
+                        <label><input type="radio" name="program" value="Liên kết quốc tế"> Liên kết quốc tế</label>
+                        <label><input type="radio" name="program" value="Văn bằng 2"> Văn bằng 2</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ngành học:* </label>
+                        <input type="text" placeholder="Chọn ngành quan tâm">
+                    </div>
+
+                    <button type="submit" class="advisory-submit-btn">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-info-section">
+        <div class="contact-info-col">
+            <div class="footer-vlu-title">Thông tin liên hệ</div>
+            <ul class="contact-info-list">
+                <li>PHÒNG TUYỂN SINH VÀ TRUYỀN THÔNG <span class="arrow">›</span></li>
+                <li>VIỆN SAU ĐẠI HỌC <span class="arrow">›</span></li>
+                <li>PHÒNG ĐÀO TẠO <span class="arrow">›</span></li>
+                <li>PHÒNG ĐỐI NGOẠI <span class="arrow">›</span></li>
+                <li>VIỆN ĐÀO TẠO QUỐC TẾ <span class="arrow">›</span></li>
+                <li>TRUNG TÂM KHẢO THÍ <span class="arrow">›</span></li>
+                <li>PHÒNG PHÁT TRIỂN NGHIÊN CỨU KHOA HỌC <span class="arrow">›</span></li>
+                <li>TRUNG TÂM HỖ TRỢ SINH VIÊN <span class="arrow">›</span></li>
+                <li>TRUNG TÂM PHÁT TRIỂN NĂNG LỰC SINH VIÊN <span class="arrow">›</span></li>
+                <li>PHÒNG CÔNG NGHỆ THÔNG TIN <span class="arrow">›</span></li>
+                <li>PHÒNG HÀNH CHÍNH VÀ QUẢN TRỊ NGUỒN NHÂN LỰC <span class="arrow">›</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-vlu">
+        <div class="footer-vlu-main">
+            <div class="footer-vlu-group">
+                <div class="footer-vlu-col footer-vlu-logo-contact">
+                    <img src="https://res.cloudinary.com/dku0qdaan/image/upload/v1751094669/Layer_1_xtetxw.png"
+                        alt="Van Lang University Logo" class="logo-img" loading="lazy">
+                    <div class="footer-vlu-contact-item"><span>Email</span><br>info@vlu.edu.vn</div>
+                    <div class="footer-vlu-contact-item"><span>Đào tạo</span><br>028.7109.9221</div>
+                    <div class="footer-vlu-contact-item"><span>Tuyển sinh</span><br>028.7105.9999</div>
+                    <div class="footer-vlu-contact-item"><span>Hỗ trợ Sinh Viên (Call Center)</span><br>028.7106.1111
+                    </div>
+                </div>
+                <div class="footer-vlu-cols">
+                    <div class="footer-vlu-col about-col">
+                        <div class="footer-vlu-title">Về chúng tôi</div>
+                        <ul>
+                            <li>Tin tức</li>
+                            <li>Sự kiện</li>
+                            <li>Tuyển dụng</li>
+                            <li>Đảm bảo chất lượng đào tạo</li>
+                            <li>Trung tâm khảo thí tiếng anh</li>
+                        </ul>
+                    </div>
+                    <div class="footer-vlu-col quick-col">
+                        <div class="footer-vlu-title">Truy cập nhanh</div>
+                        <ul>
+                            <li>Hệ thống Văn bản</li>
+                            <li>Hệ thống E-Learning</li>
+                            <li>Thư viện</li>
+                            <li>HUB</li>
+                            <li>E-job</li>
+                        </ul>
+                    </div>
+                    <div class="footer-vlu-col follow-col">
+                        <div class="footer-vlu-title">Theo dõi</div>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Youtube</li>
+                            <li>Instagram</li>
+                            <li>Tiktok</li>
+                        </ul>
+                    </div>
+                    <div class="footer-vlu-col school-col">
+                        <div class="footer-vlu-title">Các trường và khối đào tạo</div>
+                        <ul>
+                            <li>Du lịch</li>
+                            <li>Kiến Trúc</li>
+                            <li>Khoa học sức khỏe</li>
+                            <li>Công nghệ - Kỹ thuật</li>
+                            <li>Kinh doanh - Quản lý</li>
+                            <li>Thiết kế - Nghệ Thuật</li>
+                            <li>Luật - Xã hội Nhân văn - Truyền thông</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-vlu-bottom">
+                <div class="footer-vlu-bottom-left">© 2022 Van Lang University. All rights reserved.</div>
+                <div class="footer-vlu-bottom-center">
+                    <a href="#">Điều khoản</a>
+                    <a href="#">Chính sách Bảo mật</a>
+                    <div class="footer-vlu-bottom-right">Copyright</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
